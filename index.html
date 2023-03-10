@@ -11,7 +11,7 @@ $(document).ready(function(){
 var aaa = document.getElementById("audio");
 
 aaa.addEventListener("timeupdate", function(){
-    $(".tinfoil2").addClass("oven");
+    $(".tinfoil").addClass("oven");
     
     var now = parseFloat(aaa.currentTime),
         MP = "0" + Math.floor(now / 60),
@@ -32,7 +32,7 @@ aaa.addEventListener("timeupdate", function(){
     }
     
     if (wtf >= 0 && wtf <= 50) {
-        $(".oliveoil2").css({
+        $(".oliveoil").css({
         "background-image":
             gr + pct + "deg" + gr1 +
             gr + "90deg" + gr2,
@@ -40,7 +40,7 @@ aaa.addEventListener("timeupdate", function(){
     }
     
     if (wtf >= 51 && wtf <= 99) {
-        $(".oliveoil2").css({
+        $(".oliveoil").css({
         "background-image":
             gr + pct_over50 + "deg" + gr_over50 +
             gr + "90deg" + gr2,
@@ -55,7 +55,7 @@ if (typeof hasAutoplay !== typeof undefined && hasAutoplay !== false) {
     $(".playy").addClass("beff");
 }
     
-$(".cherry2").click(function(){
+$(".cherry").click(function(){
     if (aaa.paused) {
       aaa.play();
       $(".pausee").toggleClass("aff");
@@ -70,7 +70,7 @@ $(".cherry2").click(function(){
 aaa.onended = function(){
     $(".playy").removeClass("beff");
 	$(".pausee").removeClass("aff");
-	$(".tinfoil2").removeClass("oven");
+	$(".tinfoil").removeClass("oven");
 };
 
 });// ready end
